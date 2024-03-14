@@ -1,0 +1,33 @@
+body{
+    font-family: sans-serif;
+    background-color: rgba(91, 209, 245, 0.7);
+    background-image: url('bg_img.jpg');
+    background-repeat: no-repeat;
+}
+
+#weatherApp{
+    margin: auto;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    margin-top: 4rem;
+    color: rgba(245, 241, 12, 1);
+}
+
+#location-input{
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+#weather-data{
+    margin: 0 auto;
+    width: 100%;
+    padding: 25px;
+    border-radius: 5px;
+    color: rgba(245, 241, 12, 1);
+    font-size: 1.2rem;
+    font-weight: 900;
+}

@@ -1,19 +1,22 @@
 body{
     font-family: sans-serif;
     background-color: rgba(91, 209, 245, 0.7);
-    background-image: url('bg_img.jpg');
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom right, rgba(236, 77, 66, 0.4),rgba(148, 236, 66, 0.4),rgba(120,230,220,0.4),rgba(236, 66, 165, 0.4));
+    color: rgba(236, 77, 66, 0.6);
+    height: 100dvh;
 }
 
+/* Display Container */
 #weatherApp{
     margin: auto;
     width: 350px;
     height: auto;
     text-align: center;
     margin-top: 4rem;
-    color: rgba(245, 241, 12, 1);
 }
+/* Display Container */
 
+/* Input Field */
 #location-input{
     padding: 8px;
     border: 1px solid black;
@@ -21,31 +24,15 @@ body{
     outline: none;
     margin-bottom: 25px;
 }
+/* Input Field */
 
+/* API Data */
 #weather-data{
     margin: 0 auto;
     width: 100%;
     padding: 25px;
     border-radius: 5px;
-    color: rgba(245, 241, 12, 1);
     font-size: 1.2rem;
     font-weight: 900;
 }
-
-#temperature,#nm{
-    background: linear-gradient(to right, rgba(255, 2, 2, 0.8),rgba(160, 168, 85, 0.9),rgba(131, 253, 16, 0.9),rgba(8, 107, 114, 0.9),rgba(255, 11, 133, 0.8));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-#humid{
-    background: linear-gradient(to right, rgba(120,120,240,0.8),rgba(230,220,29,0.9));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-#ws{
-    background: linear-gradient(to right, rgba(120,120,240,0.8),rgba(230,220,29,0.9));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
+/* API Data */

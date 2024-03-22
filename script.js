@@ -22,6 +22,7 @@ const getWeatherData = async (location)=>{
     return data;
 }
 
+// Getting color for the data
 function getBackgroundColor(temperature){
     if(temperature < 0){
         return 'linear-gradient(to right, rgba(38, 141, 238, 0.8),rgba(134, 231, 255, 0.9))';
@@ -48,17 +49,22 @@ const displayWeatherData = (data) => {
     }
     else{
         const backgroundColor = getBackgroundColor(Math.floor(data.main.temp - 273.15));
-        weatherDataElement.style.background = backgroundColor;
+        // weatherDataElement.style.background = backgroundColor;
 
         weatherDataElement.innerHTML = `
-                                <h3 id="nm">${data.name}</h3>
-                                <p id="temperature">Temperature: ${Math.floor(data.main.temp - 273.15)}C</p>
-                                <p id="humid">Humidity: ${data.main.humidity}%</p>
-                                <p id="ws">Wind Speed: ${data.wind.speed} m/s</p>
+                                <h3 id="nm" style="background:${backgroundColor};-webkit-text-fill-color: transparent;
+                                -webkit-background-clip: text;">${data.name}</h3>
+                                <p style="background:${backgroundColor};-webkit-text-fill-color: transparent;
+                                -webkit-background-clip: text;">Temperature: ${Math.floor(data.main.temp - 273.15)}C</p>
+                                <p style="background:${backgroundColor};-webkit-text-fill-color: transparent;
+                                -webkit-background-clip: text;">Humidity: ${data.main.humidity}%</p>
+                                <p style="background:${backgroundColor};-webkit-text-fill-color: transparent;
+                                -webkit-background-clip: text;">Wind Speed: ${data.wind.speed} m/s</p>
                                 `;
     }
 }
 
+// Displaying Weather Info 
 window.onload = async () => {
     const weatherData = await getWeatherData();
     displayWeatherData(weatherData);
